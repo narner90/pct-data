@@ -8,5 +8,5 @@ class ActivitySummaryWriter:
         pass
 
     def write_summary(self, summary: pd.DataFrame) -> None:
-        with open('./data/activity_summary.pkl', 'wb') as file:
+        with open('../data/activity_summary.pkl', 'wb') as file:
             pickle.dump(summary, file)

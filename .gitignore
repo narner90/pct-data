@@ -3,4 +3,4 @@ __pycache__
 .idea
 
 # Project
-pct_data/loader/data
+pct_data/data
