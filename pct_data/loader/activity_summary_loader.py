@@ -9,7 +9,7 @@ class ActivitySummaryLoader:
     def __init__(self):
         self._client = Client()
 
-    def load_activities(self) -> pd.DataFrame:
+    def load_summary(self) -> pd.DataFrame:
         with open('./secret/access_token.pkl', 'rb') as file:
             token = pickle.load(file)
 
@@ -22,12 +22,12 @@ class ActivitySummaryLoader:
         print(f'Filtering activities')
         filtered_activities = self._filter_activities(activities)
         print(f'Creating summary')
-        return self._get_summary(filtered_activities)
+        return self._summarize(filtered_activities)
 
     def _filter_activities(self, activities) -> list:
         return list(filter(lambda x: x.name.startswith('Day '), activities))
 
-    def _get_summary(self, activities) -> pd.DataFrame:
+    def _summarize(self, activities) -> pd.DataFrame:
         summary_dict = {
             'elev_high': [a.elev_high for a in activities],
             'elev_low': [a.elev_low for a in activities],

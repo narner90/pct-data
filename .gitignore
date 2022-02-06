@@ -1,2 +1,6 @@
+# IDE
 __pycache__
 .idea
+
+# Project
+pct_data/loader/data

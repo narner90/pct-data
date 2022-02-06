@@ -2,7 +2,7 @@ import pickle
 
 from stravalib.client import Client
 
-from pct_data.data.secret_loader import SecretLoader
+from pct_data.loader.secret_loader import SecretLoader
 
 
 class AccessTokenGenerator:
