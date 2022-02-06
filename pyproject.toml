@@ -6,6 +6,8 @@ authors = ["narner90 <nateharner01@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+pandas = "^1.4.0"
+stravalib = "0.10.4"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
