@@ -11,9 +11,11 @@ server_environment = ServerEnvironment()
 def hello():
     return "Hello, World!"
 
+
 @app.route("/summary")
 def summary():
     return server_environment.get_summary()
+
 
 if __name__ == '__main__':
     app.run()
